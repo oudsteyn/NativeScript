@@ -40,10 +40,10 @@
     "dev-tests-ios": "npm run tsc-ti && tns livesync ios --path tests",
     "test-watch-android": "npm run pretest && concurrently --kill-others \"npm run tsc-tiw\" \"tns livesync android --path tests --watch\"",
     "test-watch-ios": "npm run pretest && concurrently --kill-others \"npm run tsc-tiw\" \"tns livesync ios --path tests --watch\"",
-    "pretest": "npm run link-tests && npm run tsc",
+    "pretest": "npm run link-dts && npm run link-tests && npm run tsc",
     "test-android": "tns run android --path tests --justlaunch",
     "test-ios": "tns run ios --path tests --justlaunch",
     "test": "npm run test-android && npm run test-ios",
-    "dts-ios": "npm run link-tests && rm -rf tns-core-modules/ios/objc* && TNS_TYPESCRIPT_DECLARATIONS_PATH=$PWD/tns-core-modules/ios/objc tns build ios --path tests"
+    "dts-ios": "npm run link-dts && npm run link-tests && rm -rf tns-core-modules/ios/objc* && TNS_TYPESCRIPT_DECLARATIONS_PATH=$PWD/tns-core-modules/ios/objc tns build ios --path tests"
   }
 }

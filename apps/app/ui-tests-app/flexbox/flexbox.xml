@@ -74,14 +74,14 @@
                 <Button text="4" tap="flexShrink" />
             </StackLayout>
 
-            <Label text="margin" row="9" />
+            <!--<Label text="margin" row="9" />
             <StackLayout row="9" col="1" orientation="horizontal">
                 <TextField text="{{margin}}" width="100" />
                 <Label text="width" />
                 <TextField text="{{width}}" width="100" />
                 <Label text="height" />
                 <TextField text="{{height}}" width="100" />
-            </StackLayout>
+            </StackLayout>-->
             
 
             <!-- TODO: Align self -->
@@ -89,6 +89,7 @@
         </GridLayout>
         <FlexboxLayout id="container" row="1" backgroundColor="white" margin="10">
             <!-- TODO: horizontalAlignment and verticalAlignment should be handled somehow by treating the items with proper layout params -->
+
             <Label text="row" backgroundColor="#EEEEEE" margin="20" padding="20" tap="select" />
             <Label text="row-reverse" backgroundColor="#DDDDDD" fontSize="8" tap="select" />
             <Label text="column" backgroundColor="#CCCCCC" tap="select" />

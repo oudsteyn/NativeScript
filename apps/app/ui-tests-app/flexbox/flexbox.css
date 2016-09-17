@@ -13,10 +13,10 @@
 }
 #container>Label[selected="yes"] {
     border-color: yellow;
-    animation-name: select;
+    /* animation-name: select; 
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
-    animation-iteration-count: 1;
+    animation-iteration-count: 1;*/
 }
 
 .control {

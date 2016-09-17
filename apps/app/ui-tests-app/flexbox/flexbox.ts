@@ -15,18 +15,8 @@ export const alignContent = set("alignContent");
 
 let lastSelection = null;
 export function select(args) {
-    if (lastSelection) {
-        lastSelection.selected = "no";
-        lastSelection.notify({ eventName: "selectedChange" });
-        lastSelection.page.bindingContext = null;
-    }
     console.log("Select: " + args.object);
     lastSelection = args.object;
-    if (lastSelection) {
-        lastSelection.selected = "yes";
-        lastSelection.notify({ eventName: "selectedChange" });
-        lastSelection.page.bindingContext = lastSelection;
-    }
 
     if (isAndroid) {
         let layoutParams = lastSelection.android.getLayoutParams();

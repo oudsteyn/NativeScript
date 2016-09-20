@@ -168,7 +168,9 @@ function getImageData(instance: UIImage, format: string, quality = 1.0): NSData 
         case enums.ImageFormat.jpeg: // JPEG
             data = UIImageJPEGRepresentation(instance, quality);
             break;
-
+        case enums.ImageFormat.jpg: // JPEG
+            data = UIImageJPEGRepresentation(instance, quality);
+            break;
     }
     return data;
 }
